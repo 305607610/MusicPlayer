@@ -112,6 +112,11 @@ namespace MusicPlayer
             timer1.Enabled = true;
         }
 
+        private void TableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void Timer1_Tick(object sender, EventArgs e)
         {
             max = axWindowsMediaPlayer1.currentMedia.duration;

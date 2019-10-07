@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MusicPlayer));
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lalMusicName = new System.Windows.Forms.Label();
             this.btnMusicAdd = new System.Windows.Forms.Button();
@@ -42,15 +43,20 @@
             this.btnafter = new System.Windows.Forms.Button();
             this.btnnext = new System.Windows.Forms.Button();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarMusic)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
+            // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.DarkTurquoise;
             this.tableLayoutPanel1.ColumnCount = 4;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 10F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
@@ -74,6 +80,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(360, 587);
             this.tableLayoutPanel1.TabIndex = 0;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.TableLayoutPanel1_Paint);
             // 
             // lalMusicName
             // 
@@ -88,13 +95,14 @@
             // 
             // btnMusicAdd
             // 
+            this.btnMusicAdd.BackColor = System.Drawing.Color.LightGreen;
             this.btnMusicAdd.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnMusicAdd.Location = new System.Drawing.Point(13, 58);
             this.btnMusicAdd.Name = "btnMusicAdd";
             this.btnMusicAdd.Size = new System.Drawing.Size(96, 39);
             this.btnMusicAdd.TabIndex = 1;
             this.btnMusicAdd.Text = "添加歌曲";
-            this.btnMusicAdd.UseVisualStyleBackColor = true;
+            this.btnMusicAdd.UseVisualStyleBackColor = false;
             this.btnMusicAdd.Click += new System.EventHandler(this.BtnMusicAdd_Click);
             // 
             // trackBarMusic
@@ -110,6 +118,7 @@
             // 
             // listBoxMusic
             // 
+            this.listBoxMusic.BackColor = System.Drawing.Color.Plum;
             this.tableLayoutPanel1.SetColumnSpan(this.listBoxMusic, 2);
             this.listBoxMusic.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBoxMusic.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -145,57 +154,62 @@
             // 
             // btnPalyer
             // 
+            this.btnPalyer.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnPalyer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnPalyer.Location = new System.Drawing.Point(3, 3);
             this.btnPalyer.Name = "btnPalyer";
             this.btnPalyer.Size = new System.Drawing.Size(60, 33);
             this.btnPalyer.TabIndex = 0;
             this.btnPalyer.Text = "播放";
-            this.btnPalyer.UseVisualStyleBackColor = true;
+            this.btnPalyer.UseVisualStyleBackColor = false;
             this.btnPalyer.Click += new System.EventHandler(this.BtnPalyer_Click);
             // 
             // btnPause
             // 
+            this.btnPause.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnPause.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnPause.Location = new System.Drawing.Point(69, 3);
             this.btnPause.Name = "btnPause";
             this.btnPause.Size = new System.Drawing.Size(60, 33);
             this.btnPause.TabIndex = 1;
             this.btnPause.Text = "暂停";
-            this.btnPause.UseVisualStyleBackColor = true;
+            this.btnPause.UseVisualStyleBackColor = false;
             this.btnPause.Click += new System.EventHandler(this.BtnPause_Click);
             // 
             // btnStop
             // 
+            this.btnStop.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnStop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnStop.Location = new System.Drawing.Point(135, 3);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(60, 33);
             this.btnStop.TabIndex = 2;
             this.btnStop.Text = "停止";
-            this.btnStop.UseVisualStyleBackColor = true;
+            this.btnStop.UseVisualStyleBackColor = false;
             this.btnStop.Click += new System.EventHandler(this.BtnStop_Click);
             // 
             // btnafter
             // 
+            this.btnafter.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnafter.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnafter.Location = new System.Drawing.Point(201, 3);
             this.btnafter.Name = "btnafter";
             this.btnafter.Size = new System.Drawing.Size(60, 33);
             this.btnafter.TabIndex = 3;
             this.btnafter.Text = "上一首";
-            this.btnafter.UseVisualStyleBackColor = true;
+            this.btnafter.UseVisualStyleBackColor = false;
             this.btnafter.Click += new System.EventHandler(this.Btnafter_Click);
             // 
             // btnnext
             // 
+            this.btnnext.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnnext.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnnext.Location = new System.Drawing.Point(267, 3);
             this.btnnext.Name = "btnnext";
             this.btnnext.Size = new System.Drawing.Size(64, 33);
             this.btnnext.TabIndex = 4;
             this.btnnext.Text = "下一首";
-            this.btnnext.UseVisualStyleBackColor = true;
+            this.btnnext.UseVisualStyleBackColor = false;
             this.btnnext.Click += new System.EventHandler(this.Btnnext_Click);
             // 
             // axWindowsMediaPlayer1
@@ -209,17 +223,14 @@
             this.axWindowsMediaPlayer1.TabIndex = 5;
             this.axWindowsMediaPlayer1.Visible = false;
             // 
-            // timer1
-            // 
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
-            // 
             // MusicPlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.PaleTurquoise;
             this.ClientSize = new System.Drawing.Size(364, 591);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(380, 630);
             this.MinimumSize = new System.Drawing.Size(380, 630);
