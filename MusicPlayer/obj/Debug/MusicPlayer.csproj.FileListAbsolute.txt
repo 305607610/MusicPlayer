@@ -1,0 +1,15 @@
+E:\Code\VS2019\MusicPlayer\MusicPlayer\bin\Debug\MusicPlayer.exe.config
+E:\Code\VS2019\MusicPlayer\MusicPlayer\bin\Debug\MusicPlayer.exe
+E:\Code\VS2019\MusicPlayer\MusicPlayer\bin\Debug\MusicPlayer.pdb
+E:\Code\VS2019\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.csprojAssemblyReference.cache
+E:\Code\VS2019\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.Properties.Resources.resources
+E:\Code\VS2019\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.csproj.GenerateResource.cache
+E:\Code\VS2019\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.csproj.CoreCompileInputs.cache
+E:\Code\VS2019\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.exe
+E:\Code\VS2019\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.pdb
+E:\Code\VS2019\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.MusicPlayer.resources
+E:\Code\VS2019\MusicPlayer\MusicPlayer\bin\Debug\Interop.WMPLib.dll
+E:\Code\VS2019\MusicPlayer\MusicPlayer\bin\Debug\AxInterop.WMPLib.dll
+E:\Code\VS2019\MusicPlayer\MusicPlayer\obj\Debug\Interop.WMPLib.dll
+E:\Code\VS2019\MusicPlayer\MusicPlayer\obj\Debug\AxInterop.WMPLib.dll
+E:\Code\VS2019\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.csproj.ResolveComReference.cache
