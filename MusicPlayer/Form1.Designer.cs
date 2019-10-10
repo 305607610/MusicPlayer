@@ -56,7 +56,7 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.Menu;
             this.tableLayoutPanel1.ColumnCount = 4;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 10F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
@@ -118,7 +118,7 @@
             // 
             // listBoxMusic
             // 
-            this.listBoxMusic.BackColor = System.Drawing.Color.Plum;
+            this.listBoxMusic.BackColor = System.Drawing.SystemColors.Menu;
             this.tableLayoutPanel1.SetColumnSpan(this.listBoxMusic, 2);
             this.listBoxMusic.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBoxMusic.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
